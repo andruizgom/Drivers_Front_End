@@ -3,7 +3,7 @@ import { GET_ALL_DRIVERS, GET_DRIVERS_BY_NAME, GET_DRIVERS_BY_ID, CREATE_DRIVER,
 import axios from "axios";
 
 export const getAllDrivers = () => {
-    const endpoint = 'http://localhost:3001/drivers';
+    const endpoint = 'https://drivers-server.onrender.com/drivers';
     return async (dispatch) => {
         try {
             const { data } = await axios.get(endpoint)
@@ -22,7 +22,7 @@ export const getAllDrivers = () => {
 };
 
 export const getDriversByName = (forename) => {
-    const endpoint = `http://localhost:3001/drivers/name?name=${forename}`;
+    const endpoint = `https://drivers-server.onrender.com/drivers/name?name=${forename}`;
     return async (dispatch) => {
         try {
             const { data } = await axios.get(endpoint)
@@ -42,7 +42,7 @@ export const getDriversByName = (forename) => {
 };
 
 export const getDriversById = (id) => {
-    const endpoint = `http://localhost:3001/drivers/${id}`;
+    const endpoint = `https://drivers-server.onrender.com/drivers/${id}`;
     return async (dispatch) => {
         try {
             const { data } = await axios.get(endpoint)
@@ -62,7 +62,7 @@ export const getDriversById = (id) => {
 };
 
 export const postDriver = (driver) => {
-    const endpoint = 'http://localhost:3001/drivers';
+    const endpoint = 'https://drivers-server.onrender.com/drivers';
     return async (dispatch) => {
         try {
 
@@ -82,7 +82,7 @@ export const postDriver = (driver) => {
 };
 
 export const getTeams = () => {
-    const endpoint = 'http://localhost:3001/teams';
+    const endpoint = 'https://drivers-server.onrender.com/teams';
     return async (dispatch) => {
         try {
             const { data } = await axios.get(endpoint)
@@ -111,7 +111,7 @@ export const orderDrivers = (order) => {
 }
 
 export const deleteDriver = (id) => {
-    const endpoint = `http://localhost:3001/drivers/${id}`;
+    const endpoint = `https://drivers-server.onrender.com/drivers/${id}`;
     return async (dispatch) => {
         try {
             await axios.delete(endpoint)
@@ -130,7 +130,7 @@ export const deleteDriver = (id) => {
 };
 
 export const putDriver = (id, driver) => {
-    const endpoint = `http://localhost:3001/drivers/${id}`;;
+    const endpoint = `https://drivers-server.onrender.com/drivers/${id}`;;
     return async (dispatch) => {
         try {
 
